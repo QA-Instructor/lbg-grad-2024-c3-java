@@ -78,6 +78,8 @@ public class Car {
     }
 
     public void decelerate(int deltaV, CarSpeedUnit units) {
-        this.accelerate(-deltaV, units);
+        if (deltaV > 0) {
+            this.accelerate(-deltaV, units);
+        }
     }
 }
